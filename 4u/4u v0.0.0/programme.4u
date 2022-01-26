@@ -1,0 +1,40 @@
+</>affichage d'une chaine de texte
+afficher "Bonjour le monde ! (oui on est en France ici, pas de Hallo Welt !!)\n";
+</>affectation de la variable texte
+var tphrase_de_thomas="Thomas a dit :
+
+\"J'aime bien la science-fiction et les dessins animés Disney !\".
+
+Mais voilà on s'en fiche un peu...
+
+";
+
+</>affiche la variable texte
+afficher tphrase_de_thomas;
+
+</>supprime la variable texte (libere la memoire) - la variable est desormais inutilisable en l'etat
+supprimer tphrase_de_thomas;
+
+<!--
+
+AFFICHAGE DE LA TABLE DE MULTIPLICATION DE 1 A 10
+
+-->
+
+afficher "---------------------------------TABLE DE MULTIPLICATION---------------------------------\n";
+afficher "|X\t1\t2\t3\t4\t5\t6\t7\t8\t9\t10\t|\n";
+var e_i=0;
+(10)x
+    var e_j=0;
+    e_i++;
+    afficher "|";
+    afficher e_i;
+    (10)x
+        e_j++;
+        afficher "\t";
+        afficher e_i*e_j;
+    ;
+    e_j++;
+    afficher "\t|\n";
+;
+afficher "-----------------------------------------------------------------------------------------\n";
