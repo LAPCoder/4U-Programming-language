@@ -6,6 +6,10 @@ It's [my](https://github.com/LAPCoder) programming language.
 V0.0.0 is the lastest version.
 V0.0.1 is in developpement.
 
+<!-- 
+# How to install
+Met le ici
+-->
 # How to use
 
 You must have ```gcc```, ```bison``` or ```yacc```, ```flex``` or ```lex``` and ```glib``` for modify.
