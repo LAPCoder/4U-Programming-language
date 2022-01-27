@@ -5,24 +5,26 @@ It's my programming language.
 
 You must have ```gcc```, ```bison``` or ```yacc```, ```flex``` or ```lex``` and ```glib``` for modify.
 If you want not modify, you must have ```gcc```, and go to step 1, 5, 6 and 7.
-If you want execute example-programm, just go to step 7.
+If you want execute example-programm, just go to step 1 and 7.
 
 ## 1: Go to your directory
 
 ### Windows
+
 On Windows, enter this command:
 ```batch
 cd <directory name>
 ```
-<directory name> is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
+\<directory name\> is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
 It's like ```C:\Users\user\Documents\4U\4U 0.0.0```
 
 ### Linux
+
 On Linux, enter this command:
 ```bash
 cd <directory name>
 ```
-<directory name> is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
+\<directory name\> is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
 It's like ```/home/user/Documents/4U/4U\ 0.0.0``` (for with space enter ```\ ```).
 
 ## 2: Compile the lexical analyzer
@@ -49,15 +51,17 @@ gcc lexique_4u.c syntaxe_4u.tab.c generation_code.c `pkg-config --cflags --libs 
 
 Enter this command (if you use ```gcc```) in a terminal (CMD):
 ```bash
-./4u programme.4u
+./4u programm.4u
 ```
+\<programm.4u\> is the name of your programm.
 
 ## 6: Compile the programm
 
 Enter this command:
 ```bash
-gcc programme.c
+gcc programm.c
 ```
+\<programm.c\> is the name of your programm (compiled).
 
 ## 7: Compile the programm
 
