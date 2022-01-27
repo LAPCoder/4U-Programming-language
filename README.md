@@ -6,7 +6,7 @@ It's [my](https://github.com/LAPCoder) programming language.
 V0.0.0 is the lastest version.
 V0.0.1 is in developpement.
 
-# How to use.
+# How to use
 
 You must have ```gcc```, ```bison``` or ```yacc```, ```flex``` or ```lex``` and ```glib``` for modify.
 If you want not modify, you must have ```gcc```, and go to step 1, 5, 6 and 7.
