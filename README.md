@@ -10,7 +10,7 @@ V0.0.1 is in developpement.
 
 You must have ```gcc```, ```bison``` or ```yacc```, ```flex``` or ```lex``` and ```glib``` for modify.
 If you want not modify, you must have ```gcc```, and go to step 1, 5, 6 and 7.
-If you want execute example-programm, just go to step 1 and 7.
+If you want execute example-program, just go to step 1 and 7.
 
 ## 1: Go to your directory
 
@@ -52,23 +52,23 @@ Enter this command (if you use ```gcc```):
 gcc lexique_4u.c syntaxe_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
 ```
 
-## 5: Execute the 4u programm
+## 5: Execute the 4u program
 
 Enter this command (if you use ```gcc```) in a terminal (CMD):
 ```bash
-./4u programm.4u
+./4u program.4u
 ```
-\<programm.4u\> is the name of your programm.
+\<program.4u\> is the name of your program.
 
-## 6: Compile the programm
+## 6: Compile the program
 
 Enter this command:
 ```bash
-gcc programm.c
+gcc program.c
 ```
-\<programm.c\> is the name of your programm (compiled).
+\<program.c\> is the name of your program (compiled).
 
-## 7: Compile the programm
+## 7: Compile the program
 
 Enter this command:
 ```bash
