@@ -1,1 +1,2 @@
-*.4u linguist-language=4U
+# *.4u linguist-language=4U
+*.4u linguist-detectable=false
