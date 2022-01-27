@@ -83,3 +83,7 @@ cd
 # Source
 
 I use [this](https://totodu.net/Compilation/Compilation) tutorial.
+
+# LICENSE
+
+See the [LICENSE.md](https://github.com/LAPCoder/4U-Programming-language/main/README.md) for more information.
