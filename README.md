@@ -1,5 +1,5 @@
 # 4U (Programming language)
-It's [my](https://github.com/LAPCoder) programming language.
+It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
 
 ## Lastest version
 
