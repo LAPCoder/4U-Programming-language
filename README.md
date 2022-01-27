@@ -6,6 +6,35 @@ It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
 V0.0.0 is the lastest version.
 V0.0.1 is in developpement.
 
+# Objective
+
+The main goal is to be useful, powerful, accessible and easy to use. <br />
+Goal:
+> Simpler than Python, more complete than C++, more object-oriented than Java, more interpreted than Python, more compiled than C, more cross-platform than HTML, here is the 4U!
+
+Unfortunately, we are far from the goal.
+So it is (and still) in (perpetual) development.
+
+**For understanding**:
+
+> Simpler than Python
+
+The goal of language is to be accessible to everyone.
+
+> More complete than C++
+
+The 4U will have many different functionalities (applications, games, websites, 2D, 3D, sound, image...)
+
+> More object than Java, more interpreted than Python
+
+It will be compiled ***and*** interpreted:
+- For a quick overview (when designing software), it can be interpreted.
+- For a slower rendering (but faster to execute), it can be compiled in machine language (as currently).
+
+> More cross-platform than HTML
+
+The 4U will be cross-platform.
+
 <!-- 
 # How to install
 Met le ici
