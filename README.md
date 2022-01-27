@@ -1,5 +1,10 @@
 # 4U (Programming language)
-It's my programming language.
+It's [my](https://github.com/LAPCoder) programming language.
+
+## Lastest version
+
+V0.0.0 is the lastest version.
+V0.0.1 is in developpement.
 
 # How to use.
 
@@ -77,4 +82,4 @@ cd
 
 # Source
 
-I use [this](https://totodu.net/Compilation/Compilation).
+I use [this](https://totodu.net/Compilation/Compilation) tutorial.
