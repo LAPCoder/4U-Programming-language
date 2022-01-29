@@ -56,8 +56,8 @@ Met le ici
 -->
 # How to use
 
-You must have ```gcc```, ```bison``` or ```yacc```, ```flex``` or ```lex``` and ```glib``` for modify.
-If you want not modify, you must have ```gcc```, and go to step 1, 5, 6 and 7.
+You must have `gcc`, `bison` or `yacc`, `flex` or `lex` and `glib` for modify.
+If you want not modify, you must have `gcc`, and go to step 1, 5, 6 and 7.
 If you want execute example-program, just go to step 1 and 7.
 
 ## 1: Go to your directory
@@ -69,7 +69,7 @@ On Windows, enter this command:
 cd <directory name>
 ```
 \<directory name\> is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
-It's like ```C:\Users\user\Documents\4U\4U 0.0.0```
+It's like `C:\Users\user\Documents\4U\4U 0.0.0`
 
 ### Linux
 
@@ -78,31 +78,31 @@ On Linux, enter this command:
 cd <directory name>
 ```
 \<directory name\> is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
-It's like ```/home/user/Documents/4U/4U\ 0.0.0``` (for with space enter ```\ ```).
+It's like `/home/user/Documents/4U/4U\ 0.0.0` (for with space enter `\ `).
 
 ## 2: Compile the lexical analyzer
   
-Enter this command (if you use ```flex```):
+Enter this command (if you use `flex`):
 ```bash
 flex -o lexique_4u.c lexique_4u.lex
 ```
 ## 3: Compile the syntax analyzer
   
-Enter this command (if you use ```bison```):
+Enter this command (if you use `bison`):
 ```bash
 bison -d syntaxe_4u.y
 ```
 
 ## 4: Compile the compiler
   
-Enter this command (if you use ```gcc```):
+Enter this command (if you use `gcc`):
 ```bash
 gcc lexique_4u.c syntaxe_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
 ```
 
 ## 5: Execute the 4u program
 
-Enter this command (if you use ```gcc```) in a terminal (CMD):
+Enter this command (if you use `gcc`) in a terminal (CMD):
 ```bash
 ./4u program.4u
 ```
