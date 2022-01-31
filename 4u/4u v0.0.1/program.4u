@@ -1,0 +1,65 @@
+</ FILE FOR INFORMATION
+ 
+ Multi-line comment
+/>
+
+</> Comment
+</>
+
+</> Print something
+print "\nSomething:\n";
+print "Hello!\n";
+
+</> Create a variable (must start by 'e' (entier) if it's a num, by 't' (text) if it's a str, by 'd' (decimal) if it's a decimal and by 'b' (boolean) if it's a boolean)
+print "\nCreate variable:\n";
+e_variable = 0;
+t_variable = "Hi!";
+
+print t_variable;
+
+</> If
+print "\nIf:\n";
+if 5 == 5 do
+    print 1;
+else
+    print "Bug";
+;
+print "\n";
+if true do
+    print 1;
+;
+print "\n";
+
+</> Increment and decrement
+print "\n++ and --:\n";
+e_variable ++;
+print e_variable;
+print "\n";
+e_variable --;
+print e_variable;
+print "\n";
+
+</> For
+print "\nFor:\n";
+e_a = 1;
+e_b = 1;
+(10)x
+    print e_a;
+    print "\n";
+    print e_b;
+    print "\n";
+    e_a += e_b;
+    e_b += e_a;
+;
+
+</> While
+print "\nWhile:\n";
+e_i=0;
+(e_i <= 10)?
+    e_i += 2;
+    print e_i;
+    print "\n";
+;
+
+</> Delet variable (with text)
+del t_variable;
