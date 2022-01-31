@@ -16,8 +16,8 @@ It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
 
 ## Lastest version
 
-V0.0.0 is the lastest version.
-V0.0.1 is in developpement.
+V0.0.1 is the lastest version.
+V0.0.2 is in developpement.
 
 # Objective
 
