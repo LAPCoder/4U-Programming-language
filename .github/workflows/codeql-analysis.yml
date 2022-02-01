@@ -14,9 +14,21 @@ name: "CodeQL"
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - '**.4u'
+      - '**.md'
+      - '**.y'
+      - '**.lex'
+      - 'a.out'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ main ]
+    paths-ignore:
+      - '**.4u'
+      - '**.md'
+      - '**.y'
+      - '**.lex'
+      - 'a.out'
   schedule:
     - cron: '16 8 * * 0'
 
@@ -62,9 +74,9 @@ jobs:
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
 
-    - run: |
-       make bootstrap
-       make release
+    #- run: |
+    #   make bootstrap
+    #   make release
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
