@@ -56,9 +56,9 @@ Met le ici
 -->
 # How to use
 
-You must have `gcc`, `bison` or `yacc`, `flex` or `lex` and `glib` for modify.
-If you want not modify, you must have `gcc`, and go to step 1, 5, 6 and 7.
-If you want execute example-program, just go to step 1 and 7.
+You must have `gcc`, `bison` or `yacc`, `flex` or `lex` and `glib`.
+<!-- If you want not modify, you must have `gcc`, and go to step 1, 5, 6 and 7.
+If you want execute example-program, just go to step 1 and 7. -->
 
 ## 1: Go to your directory
 
