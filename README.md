@@ -132,12 +132,6 @@ cd
 
 I use [this](https://totodu.net/Compilation/Compilation) tutorial.
 
-# Versions
-
-## V0.0.0
-
-Initial relase.
-
 # LICENSE
 
 See the [LICENSE.md](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md) for more information.<br />
