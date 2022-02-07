@@ -140,7 +140,7 @@ Initial relase.
 
 # LICENSE
 
-See the [LICENSE.md](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md) for more information.
+See the [LICENSE.md](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md) for more information.<br />
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
 	<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
 </a><br />
