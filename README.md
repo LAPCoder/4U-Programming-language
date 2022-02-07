@@ -90,14 +90,14 @@ flex -o lexique_4u.c lexique_4u.lex
   
 Enter this command (if you use `bison`):
 ```bash
-bison -d syntaxe_4u.y
+bison -d syntax_4u.y
 ```
 
 ## 4: Compile the compiler
   
 Enter this command (if you use `gcc`):
 ```bash
-gcc lexique_4u.c syntaxe_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
+gcc lexique_4u.c syntax_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
 ```
 
 ## 5: Execute the 4u program
