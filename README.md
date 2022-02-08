@@ -3,6 +3,23 @@
 It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
 (Please put a ⭐ if you lke it 😀!)
 
+![Downloads](https://img.shields.io/github/downloads/LAPCoder/4U-Programming-language/total)
+![License](https://img.shields.io/badge/license-CC--BY--NC--SA-green)
+![GitHub release](https://img.shields.io/github/v/release/LAPCoder/4U-Programming-Language?include_prereleases)
+![GitHub branch checks state](https://img.shields.io/github/checks-status/LAPCoder/4U-Programming-Language/main)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/LAPCoder/4U-Programming-Language)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/LAPCoder/4U-Programming-Language)
+![GitHub Release Date](https://img.shields.io/github/release-date-pre/LAPCoder/4U-Programming-Language)
+![GitHub language count](https://img.shields.io/github/languages/count/LAPCoder/4U-Programming-Language)
+![GitHub deployments](https://img.shields.io/github/deployments/LAPCoder/4U-Programming-Language/github-pages)
+![GitHub Discussions](https://img.shields.io/github/discussions/LAPCoder/4U-Programming-Language)
+![GitHub issues](https://img.shields.io/github/issues/LAPCoder/4U-Programming-Language?color=yellow)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/LAPCoder/4U-Programming-Language?color=yellow)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/LAPCoder/4U-Programming-Language?color=yellow)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/LAPCoder/4U-Programming-Language?color=yellow)
+
+[![Shield.io](https://img.shields.io/badge/Make%20with-https%3A%2F%2Fshields.io%2F-informational)](https://shields.io)
+
 ```
                        _____   _____   _____   _____    ___    _   _   _   _   _____   _   _   _____ 
     ____   _      _   |  .  \ |  .  \ /  _  \ /  ___\  / ^ \  | \_/ | | \_/ | |_   _| |  \| | /  ___\
