@@ -12,8 +12,8 @@ on:
     paths:
       - '**.c'
       - '**.h'
-    paths-ignore:
-      - 'docs/**'
+   # paths-ignore:
+   #   - 'docs/**'
   pull_request:
     branches: [main]
   schedule:
