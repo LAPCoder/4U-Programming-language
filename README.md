@@ -31,10 +31,14 @@ It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
                       |_____| |_| |_| |_|\__| \_____/ \_____/ |_| |_| \_____/ |__͞_͞_͞_.
 ```
 
+## What is it?
+
+This is not only a programming language. It's will be a code editor, a programming language, a doc, an IDE, an ODE...
+
 ## Lastest version
 
 V0.0.1 is the lastest version.
-V0.0.2 is in developpement.
+V1.0.0 is in developpement.
 
 # Objective
 
@@ -148,6 +152,10 @@ cd
 # Source
 
 I use [this](https://totodu.net/Compilation/Compilation) tutorial.
+
+# Logo
+
+If you have a logo, share it in discussions.
 
 # LICENSE
 
