@@ -17,6 +17,7 @@ It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/LAPCoder/4U-Programming-Language?color=yellow)](https://github.com/LAPCoder/4U-Programming-language/issues?q=is%3Aissue+is%3Aclosed)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/LAPCoder/4U-Programming-Language?color=yellow)](https://github.com/LAPCoder/4U-Programming-language/pulls?q=is%3Apr+is%3Aopen)
 [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/LAPCoder/4U-Programming-Language?color=yellow)](https://github.com/LAPCoder/4U-Programming-language/pulls?q=is%3Apr+is%3Aclosed)
+![Security Headers](https://img.shields.io/security-headers?label=security%20headers%20of%20website&url=https%3A%2F%2Flapcoder.github.io%2F4U-Programming-language%2F)
 
 [![Shield.io](https://img.shields.io/badge/Make%20with-https%3A%2F%2Fshields.io%2F-informational)](https://shields.io)
 
