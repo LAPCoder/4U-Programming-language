@@ -3,20 +3,21 @@
 It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
 (Please put a ⭐ if you lke it 😀!)
 
-![Downloads](https://img.shields.io/github/downloads/LAPCoder/4U-Programming-language/total)
-![License](https://img.shields.io/badge/license-CC--BY--NC--SA-green)
-![GitHub release](https://img.shields.io/github/v/release/LAPCoder/4U-Programming-Language?include_prereleases)
+[![GitHub release](https://img.shields.io/github/v/release/LAPCoder/4U-Programming-Language?include_prereleases)](https://github.com/LAPCoder/4U-Programming-language/releases)
+[![License](https://img.shields.io/badge/license-CC--BY--NC--SA-green)](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md)
+[![Downloads](https://img.shields.io/github/downloads/LAPCoder/4U-Programming-language/total)](https://github.com/LAPCoder/4U-Programming-language/tags)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/LAPCoder/4U-Programming-Language/main)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/LAPCoder/4U-Programming-Language)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/LAPCoder/4U-Programming-Language)
-![GitHub Release Date](https://img.shields.io/github/release-date-pre/LAPCoder/4U-Programming-Language)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/y/LAPCoder/4U-Programming-Language)](https://github.com/LAPCoder/4U-Programming-language/graphs/commit-activity)
+[![GitHub Release Date](https://img.shields.io/github/release-date-pre/LAPCoder/4U-Programming-Language)](https://github.com/LAPCoder/4U-Programming-language/releases)
 ![GitHub language count](https://img.shields.io/github/languages/count/LAPCoder/4U-Programming-Language)
 ![GitHub deployments](https://img.shields.io/github/deployments/LAPCoder/4U-Programming-Language/github-pages)
-![GitHub Discussions](https://img.shields.io/github/discussions/LAPCoder/4U-Programming-Language)
-![GitHub issues](https://img.shields.io/github/issues/LAPCoder/4U-Programming-Language?color=yellow)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/LAPCoder/4U-Programming-Language?color=yellow)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/LAPCoder/4U-Programming-Language?color=yellow)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/LAPCoder/4U-Programming-Language?color=yellow)
+[![GitHub Discussions](https://img.shields.io/github/discussions/LAPCoder/4U-Programming-Language)](https://github.com/LAPCoder/4U-Programming-language/discussions)
+[![GitHub issues](https://img.shields.io/github/issues/LAPCoder/4U-Programming-Language?color=yellow)](https://github.com/LAPCoder/4U-Programming-language/issues?q=is%3Aissue+is%3Aopen)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/LAPCoder/4U-Programming-Language?color=yellow)](https://github.com/LAPCoder/4U-Programming-language/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/LAPCoder/4U-Programming-Language?color=yellow)](https://github.com/LAPCoder/4U-Programming-language/pulls?q=is%3Apr+is%3Aopen)
+[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/LAPCoder/4U-Programming-Language?color=yellow)](https://github.com/LAPCoder/4U-Programming-language/pulls?q=is%3Apr+is%3Aclosed)
+![Security Headers](https://img.shields.io/security-headers?label=security%20headers%20of%20website&url=https%3A%2F%2Flapcoder.github.io%2F4U-Programming-language%2F)
 
 [![Shield.io](https://img.shields.io/badge/Make%20with-https%3A%2F%2Fshields.io%2F-informational)](https://shields.io)
 
@@ -26,15 +27,19 @@ It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
    / _  | | |    | |  |  ___/ |  _  / | |_| | | |_]¨; /  _  \ | \_/ | | \_/ |  _| |_  | \ \ | | |_]¨;
   / / | | | |    | |  |_|     |_| \_\ \_____/ \_____/ |_| |_| |_| |_| |_| |_| |_____| |_|\__| \_____/
  / /__| |_| |    | |   _        ___    _   _   _____   _   _    ___    _____   _____ 
-/___    __  \____/ /  | |      / ^ \  |  \| | /  ___\ | | | |  / ^ \  /  ___\ |  ---'
+/___    __  \____/ /  | |      / ^ \  |  \| | /  ___\ | | | |  / ^ \  /  ___\ |  ___'
     |__|   \______/   | |___  /  _  \ | \ \ | | |_]¨; | \_/ | /  _  \ | |_]¨; |  ===
-                      |_____| |_| |_| |_|\__| \_____/ \_____/ |_| |_| \_____/ '====='
+                      |_____| |_| |_| |_|\__| \_____/ \_____/ |_| |_| \_____/ |__͞_͞_͞_.
 ```
+
+## What is it?
+
+This is not only a programming language. It's will be a code editor, a programming language, a doc, an IDE, an ODE...
 
 ## Lastest version
 
 V0.0.1 is the lastest version.
-V0.0.2 is in developpement.
+V1.0.0 is in developpement.
 
 # Objective
 
@@ -148,6 +153,10 @@ cd
 # Source
 
 I use [this](https://totodu.net/Compilation/Compilation) tutorial.
+
+# Logo
+
+If you have a logo, share it in discussions.
 
 # LICENSE
 
