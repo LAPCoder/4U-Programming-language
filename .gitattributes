@@ -1,6 +1,11 @@
-# *.4u linguist-language=4U
-*.4u linguist-detectable=false
-*.md linguist-detectable=true
-*.md linguist-documentation=false
-# *.html linguist-detectable=true
-# *.css linguist-detectable=true
+*.4u   linguist-language=4U
+*.4u   linguist-detectable=true
+*.4u   linguist-documentation=false
+*.html linguist-detectable=true
+*.html linguist-documentation=false
+*.css  linguist-detectable=true
+*.css  linguist-documentation=false
+*.js   linguist-detectable=true
+*.js   linguist-documentation=false
+*.md   linguist-detectable=true
+*.md   linguist-documentation=false
