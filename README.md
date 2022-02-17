@@ -18,6 +18,7 @@ It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/LAPCoder/4U-Programming-Language?color=yellow)](https://github.com/LAPCoder/4U-Programming-language/pulls?q=is%3Apr+is%3Aopen)
 [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/LAPCoder/4U-Programming-Language?color=yellow)](https://github.com/LAPCoder/4U-Programming-language/pulls?q=is%3Apr+is%3Aclosed)
 ![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Flapcoder.github.io%2F4U-Programming-language%2F)
+[![Code Scanning - Action](https://github.com/LAPCoder/4U-Programming-Language/workflows/Code%20Scanning%20-%20Action/badge.svg)](https://github.com/LAPCoder/4U-Programming-Language/actions?query=workflow:"Code+Scanning+-+Action")
 
 [![Shield.io](https://img.shields.io/badge/Make%20with-https%3A%2F%2Fshields.io%2F-informational)](https://shields.io)
 
