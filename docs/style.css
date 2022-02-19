@@ -111,7 +111,7 @@ code .dm {
 .nav-block svg {
     width: 25px;
     fill: #f2f2f2;
-    transition: fill 0.3 ease-in-out;
+    transition: fill 0.3s ease-in-out;
 }
 
 .nav-block svg:hover { fill: #772612; }
@@ -130,7 +130,7 @@ code .dm {
     background: #ddd;
     color: #000;
     transform: translateX(-100%);
-    transition: transform 0.3 ease-out;
+    transition: transform 0.3s ease-out;
     border-right: 2px solid #fff;
     border-left: 2px solid #fff;
 }
