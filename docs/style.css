@@ -62,7 +62,11 @@ code .dm {
     width: 75px;
 }
 
-.wrapper .dm {
+#h1Nav {
+    background: #ccc;
+}
+
+.wrapper .dm, #h1Nav {
     background: #333;
 }
 
