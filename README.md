@@ -91,7 +91,7 @@ On Windows, enter this command:
 ```batch
 cd <directory name>
 ```
-\<directory name\> is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
+`<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
 It's like `C:\Users\user\Documents\4U\4U 0.0.0`
 
 ### Linux
@@ -100,7 +100,7 @@ On Linux, enter this command:
 ```bash
 cd <directory name>
 ```
-\<directory name\> is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
+`<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
 It's like `/home/user/Documents/4U/4U\ 0.0.0` (for with space enter `\ `).
 
 ## 2: Compile the lexical analyzer
@@ -129,7 +129,7 @@ Enter this command (if you use `gcc`) in a terminal (CMD):
 ```bash
 ./4u program.4u
 ```
-\<program.4u\> is the name of your program.
+`<program.4u>` is the name of your program.
 
 ## 6: Compile the program
 
@@ -137,7 +137,7 @@ Enter this command:
 ```bash
 gcc program.c
 ```
-\<program.c\> is the name of your program (compiled).
+`<program.c>` is the name of your program (compiled).
 
 ## 7: Compile the program
 
@@ -167,5 +167,4 @@ See the [LICENSE.md](https://github.com/LAPCoder/4U-Programming-language/blob/ma
 </a><br />
 This work is licensed under a 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-	Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
-</a>.
+	Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
