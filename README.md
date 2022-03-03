@@ -1,7 +1,7 @@
 # 4U (Programming language)
 
 It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
-(Please put a ⭐ if you lke it 😀!)
+<!--(Please put a ⭐ if you lke it 😀!)-->
 
 [![GitHub release](https://img.shields.io/github/v/release/LAPCoder/4U-Programming-Language?include_prereleases)](https://github.com/LAPCoder/4U-Programming-language/releases)
 [![License](https://img.shields.io/badge/license-CC--BY--NC--SA-green)](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md)
