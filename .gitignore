@@ -1,0 +1,4 @@
+*.exe
+commands/bin/
+*.sublime-project
+*.sublime-workspace
