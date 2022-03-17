@@ -8,3 +8,4 @@ Usage:
 ```
 --help / -H   Displays the commands
 --version / -V  Displays the version of the 4U compiler
+```
