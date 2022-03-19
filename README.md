@@ -1,7 +1,7 @@
 # 4U (Programming language)
 
 It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
-<!--(Please put a ⭐ if you lke it 😀!)-->
+<!-- (Please put a ⭐ if you like it 😀!) -->
 
 [![GitHub release](https://img.shields.io/github/v/release/LAPCoder/4U-Programming-Language?include_prereleases)](https://github.com/LAPCoder/4U-Programming-language/releases)
 [![License](https://img.shields.io/badge/license-CC--BY--NC--SA-green)](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md)
@@ -123,9 +123,9 @@ Enter this command (if you use `gcc`):
 gcc lexique_4u.c syntax_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
 ```
 
-## 5: Execute the 4u program
+## 5: Execute the 4U program
 
-Enter this command (if you use `gcc`) in a terminal (CMD):
+Enter this command (if you use `gcc`) in a terminal:
 ```bash
 ./4u program.4u
 ```
