@@ -5,9 +5,30 @@
 
 #define VERSION "0.1.0"
 
+void clearTerminalByOSType()
+{
+    // check the OS
+    // Windows (both 32 and 64 bits)
+    #ifdef _WIN32
+    system("cls");
+    #endif
+
+    // Unix (Linux etc...)
+    // dosen't work on MacOS
+    #ifdef __unix__
+    system("clear");
+    #endif
+
+    // MacOS
+    #ifdef __APPLE__
+    system("clear");
+    #endif
+}
+
 void displayHelp()
 {
-    system("cls");
+    clearTerminalByOSType();
+
     printf("\n\t\033[0;34m 4U : All the commands\033[0;37m\n\n--help / -H   Displays the commands\n");
     printf("--version / -V  Displays the version of the 4U compiler.");
     system("pause>nul");
