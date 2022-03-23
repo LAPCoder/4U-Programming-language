@@ -1,6 +1,6 @@
 # 4U (Programming language)
 
-It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
+It's [my (LAPCoder)](https://github.com/LAPCoder) programming language.
 <!-- (Please put a ⭐ if you like it 😀!) -->
 
 [![GitHub release](https://img.shields.io/github/v/release/LAPCoder/4U-Programming-Language?include_prereleases)](https://github.com/LAPCoder/4U-Programming-language/releases)
@@ -28,9 +28,9 @@ It's [my (@LAPCoder)](https://github.com/LAPCoder) programming language.
    / _  | | |    | |  |  ___/ |  _  / | |_| | | |_]¨; /  _  \ | \_/ | | \_/ |  _| |_  | \ \ | | |_]¨;
   / / | | | |    | |  |_|     |_| \_\ \_____/ \_____/ |_| |_| |_| |_| |_| |_| |_____| |_|\__| \_____/
  / /__| |_| |    | |   _        ___    _   _   _____   _   _    ___    _____   _____ 
-/___    __  \____/ /  | |      / ^ \  |  \| | /  ___\ | | | |  / ^ \  /  ___\ |  ___'
-    |__|   \______/   | |___  /  _  \ | \ \ | | |_]¨; | \_/ | /  _  \ | |_]¨; |  ===
-                      |_____| |_| |_| |_|\__| \_____/ \_____/ |_| |_| \_____/ |__͞_͞_͞_.
+/___    __  \____/ /  | |      / ^ \  |  \| | /  ___\ | | | |  / ^ \  /  ___\ |  ---'
+    |__|   \______/   | |___  /  _  \ | \ \ | | |_]¨; | \_/ | /  _  \ | |_]¨; |  ̅_̅_]
+                      |_____| |_| |_| |_|\__| \_____/ \_____/ |_| |_| \_____/ |__͞_͞_͞_]
 ```
 
 ## What is it?
@@ -167,6 +167,7 @@ I'll put an executable file in our website soon. You need to put it in a folder 
 # Source
 
 I use [this](https://totodu.net/Compilation/Compilation) tutorial.
+Thanks to [totodunet](https://github.com/totodunet).
 
 # Logo
 
@@ -174,7 +175,8 @@ If you have a logo, share it in discussions.
 
 # LICENSE
 
-See the [LICENSE.md](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md) for more information.<br />
+See [`LICENSE.md`](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md) for more information.<br />
+
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
 	<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
 </a><br />
