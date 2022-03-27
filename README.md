@@ -10,7 +10,7 @@ It's [my (LAPCoder)](https://github.com/LAPCoder) programming language.
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/LAPCoder/4U-Programming-Language)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/y/LAPCoder/4U-Programming-Language)](https://github.com/LAPCoder/4U-Programming-language/graphs/commit-activity)
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/LAPCoder/4U-Programming-Language)](https://github.com/LAPCoder/4U-Programming-language/releases)
-![GitHub language count](https://img.shields.io/github/languages/count/LAPCoder/4U-Programming-Language)
+![Language count](https://img.shields.io/github/languages/count/LAPCoder/4U-Programming-Language)
 ![GitHub deployments](https://img.shields.io/github/deployments/LAPCoder/4U-Programming-Language/github-pages)
 [![GitHub Discussions](https://img.shields.io/github/discussions/LAPCoder/4U-Programming-Language)](https://github.com/LAPCoder/4U-Programming-language/discussions)
 [![GitHub issues](https://img.shields.io/github/issues/LAPCoder/4U-Programming-Language?color=yellow)](https://github.com/LAPCoder/4U-Programming-language/issues?q=is%3Aissue+is%3Aopen)
@@ -35,16 +35,17 @@ It's [my (LAPCoder)](https://github.com/LAPCoder) programming language.
 
 ## What is it?
 
-This is not only a programming language. It's will be a code editor, a programming language, a doc, an IDE, an ODE...
+This is not only a programming language. It will be a code editor, a programming language, a doc, an IDE, an ODE…
 
-## Lastest version
+## The Latest version
 
-V0.0.1 is the lastest version.
-V1.0.0 is in developpement.
+V0.0.1 is the latest version.
+V1.0.0 is in development.
 
 # Objective
 
-The main goal is to be useful, powerful, accessible and easy to use. <br />
+The main goal is to be useful, powerful, accessible, and easy to use.
+
 Goal:
 > Simpler than Python, more complete than C++, more object-oriented than Java, more interpreted than Python, more compiled than C, more cross-platform than HTML, here is the 4U!
 
@@ -59,7 +60,7 @@ The goal of language is to be accessible to everyone.
 
 > More complete than C++
 
-The 4U will have many different functionalities (applications, games, websites, 2D, 3D, sound, image...)
+The 4U will have many functionalities (applications, games, websites, 2D, 3D, sound, image…).
 
 > More object than Java, more interpreted than Python
 
@@ -81,7 +82,7 @@ Met le ici
 
 You must have `gcc`, `bison` or `yacc`, `flex` or `lex` and `glib`.
 <!-- If you want not modify, you must have `gcc`, and go to step 1, 5, 6 and 7.
-If you want execute example-program, just go to step 1 and 7. -->
+If you want to execute example-program, just go to step 1 and 7. -->
 
 ## 1: Go to your directory
 
@@ -101,7 +102,7 @@ On Linux, enter this command:
 cd <directory name>
 ```
 `<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
-It's like `/home/user/Documents/4U/4U\ 0.0.0` (for with space enter `\ `).
+It's like `/home/user/Documents/4U/4U\ 0.0.0` (for with space, enter `\ `).
 
 ## 2: Compile the lexical analyzer
   
@@ -152,17 +153,17 @@ cd
 ```
 # Compile Command
 
-To compile command, here is a simple way to do it on Windows. Go in the 4U command file and type
+To compile command, here is a simple way to do it on Windows. Go to the 4U command file and type:
 ```bat
 > mkdir bin
 > gcc *.c -o bin/4U
 ```
-It will create an executable. If you want to use it alldays, I really recommand add the bin/ folder into the PATH.
+It will create an executable. If you want to use it all days, I really recommend add the `bin/` folder into the PATH.
 
 Whatever, if you want a normal installation of the 4U command (without compiling),
 I'll put an executable file in our website soon. You need to put it in a folder that you added to PATH.
 
-**AT THE TIME, THE COMMAND DOSEN'T WORKS. WE HIGHLY RECOMMAND NOT INSTALLING NOW. IT'S COMING SOON BUT AT THE TIME IT'S IN BETA.**
+**AT THE TIME, THE COMMAND DOESN'T WORK. WE HIGHLY RECOMMEND NOT INSTALLING NOW. IT'S COMING SOON, BUT AT THE TIME IT'S IN BETA.**
 
 # Source
 
