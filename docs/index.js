@@ -1,7 +1,14 @@
 function toggle_darkMode() {
 	var elements = document.querySelectorAll(':scope body *, html, body');
-	console.log(elements);
-	for (i = 0; i < elements.length; i++) {
-		elements[i].classList.toggle("dm");
+	if (document.getElementById("checkbox").checked == true) {
+		for (i = 0; i < elements.length; i++) {
+			elements[i].classList.add("dm");
+		}
+		// console.log("night");
+	} else {
+		for (i = 0; i < elements.length; i++) {
+			elements[i].classList.remove("dm");
+		}
+		// console.log("day");
 	}
 }
