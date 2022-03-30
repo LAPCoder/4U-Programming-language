@@ -170,9 +170,21 @@ I'll put an executable file in our website soon. You need to put it in a folder 
 I use [this](https://totodu.net/Compilation/Compilation) tutorial.
 Thanks to [totodunet](https://github.com/totodunet).
 
+# QR Code
+
+![QR code](https://raw.githubusercontent.com/Yagi-404/PY-QR/main/src/4U%20Programming%20Language.qr.png "Scan it!")
+
 # Logo
 
 If you have a logo, share it in discussions.
+```
+   ____    _
+  / _  |  | |
+ / / | |  | |
+/ /__| |  | |
+|____  \__/ |
+      \____/
+```
 
 # LICENSE
 
