@@ -14,6 +14,10 @@
 }
 
 a {
+    color: #000;
+}
+
+a .dm {
     color: #fff;
 }
 
@@ -66,7 +70,7 @@ code .dm {
     background: #ccc;
 }
 
-.wrapper .dm, #h1Nav {
+.wrapper .dm, #h1Nav .dm {
     background: #333;
 }
 
@@ -118,7 +122,8 @@ code .dm {
     transition: fill 0.3s ease-in-out;
 }
 
-.nav-block svg:hover { fill: #772612; }
+.nav-block svg:hover { fill: #ff5d35; }
+.nav-block svg.dm:hover { fill: #772612; }
 
 .nav-block svg:active { fill: #772612; }
 
@@ -165,8 +170,12 @@ code .dm {
 
 
 .sub-nav li a {
-    color: #f2f2f2;
+    color: #080808;
     text-decoration: none;
+}
+
+.sub-nav li a.dm {
+    color: #f2f2f2;
 }
 
 #print-ex {
