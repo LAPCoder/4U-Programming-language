@@ -17,7 +17,7 @@ a {
     color: #000;
 }
 
-a .dm {
+a.dm {
     color: #fff;
 }
 
@@ -26,8 +26,9 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-body .dm {
-    background: #222;
+body.dm, html .dm {
+    background-color: #222;
+    color: #ddd;
 }
 
 h3 {
@@ -37,7 +38,7 @@ h3 {
     color: #464646;
 }
 
-h3 .dm {
+h3.dm {
     color: #cacaca;
 }
 
@@ -47,7 +48,7 @@ code {
     background: #eee;
 }
 
-code .dm {
+code.dm {
     background: #111;
 }
 
@@ -66,11 +67,11 @@ code .dm {
     width: 75px;
 }
 
-#h1Nav {
+#h1Nav:not(.dm) {
     background: #ccc;
 }
 
-.wrapper .dm, #h1Nav .dm {
+.wrapper.dm, #h1Nav.dm {
     background: #333;
 }
 
@@ -90,15 +91,15 @@ code .dm {
     background: #fff;
 }
 
-.dot .dm {
+.dot.dm {
     background: #000;
 }
 
-.d1 { background: crimson; }
+.d1 { background: crimson !important; }
 
-.d2 { background: yellow; }
+.d2 { background: yellow !important; }
 
-.d3 { background: green; }
+.d3 { background: green !important; }
 
 .nav-block {
     padding: 20px 0;
@@ -108,7 +109,7 @@ code .dm {
     border-bottom: 1px solid #0d0d0de1;
 }
 
-.nav-block .dm {
+.nav-block.dm {
     border-bottom: 1px solid #f2f2f21e;
 }
 
@@ -117,6 +118,7 @@ code .dm {
 }
 
 .nav-block svg {
+    background-color: #fff0;
     width: 25px;
     fill: #f2f2f2;
     transition: fill 0.3s ease-in-out;
@@ -145,7 +147,7 @@ code .dm {
 }
 
 
-.sub-nav .dm {
+.sub-nav.dm {
     background: #333;
     color: #fff;
     border-right: 2px solid #000;
@@ -160,7 +162,7 @@ code .dm {
     background: #ddd;
 }
 
-.sub-nav h2 .dm {
+.sub-nav h2.dm {
     background: #222;
 }
 
@@ -175,6 +177,7 @@ code .dm {
 }
 
 .sub-nav li a.dm {
+    background-color: #fff0;
     color: #f2f2f2;
 }
 
@@ -197,7 +200,7 @@ code .dm {
     color: #363636;
 }
 
-.main-title .dm {
+.main-title.dm {
     color: #cacaca;
 }
 
@@ -210,6 +213,6 @@ code .dm {
 }
 
 
-.main-content .dm {
+.main-content.dm {
     color: #cacaca;
 }
