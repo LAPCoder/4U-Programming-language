@@ -1,6 +1,7 @@
 *.4u   linguist-language=4U
 *      linguist-detectable=true
 *      linguist-documentation=false
+lexique_4u.c linguist-documentation=true
 
 #*.4u   linguist-detectable=true
 #*.4u   linguist-documentation=false
