@@ -14,5 +14,5 @@ function toggle_darkMode() {
 }
 
 $(function () {
-	$("#header").load("/header.html");
+	$("#header").load("/4U-Programming-language/header.html");
 });
