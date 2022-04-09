@@ -12,3 +12,7 @@ function toggle_darkMode() {
 		// console.log("day");
 	}
 }
+
+$(function () {
+	$("#header").load("/header.html");
+});
