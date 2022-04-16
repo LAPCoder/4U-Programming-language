@@ -8,13 +8,15 @@ Usage:
 --version / -V  Displays the version of the 4U compiler
 ```-->
 
-# Compile Command
+## Compile Command
 
 To compile command, here is a simple way to do it on Windows. Go in the 4U command file and type
+
 ```bat
 > mkdir bin
 > gcc *.c -o bin/4U
 ```
+
 It will create an executable. If you want to use it alldays, I really recommand add the bin/ folder into the PATH.
 
 Whatever, if you want a normal installation of the 4U command (without compiling),
