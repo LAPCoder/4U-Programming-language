@@ -1,6 +1,6 @@
 # 4U (Programming language)
 
-It's [my (LAPCoder)](https://github.com/LAPCoder) programming language.
+It's [*my* (LAPCoder)](https://github.com/LAPCoder) programming language.
 <!-- (Please put a ⭐ if you like it 😀!) -->
 
 [![GitHub release](https://img.shields.io/github/v/release/LAPCoder/4U-Programming-Language?include_prereleases)](https://github.com/LAPCoder/4U-Programming-language/releases)
@@ -36,7 +36,7 @@ It's [my (LAPCoder)](https://github.com/LAPCoder) programming language.
 
 ## What is it?
 
-This is not only a programming language. It will be a code editor, a programming language, a doc, an IDE, an ODE…
+This is not only a programming language. It will be a code editor, a programming language, a doc, an IDE, an ODE, an extension for VS Code…
 
 ## The Latest version
 
@@ -98,7 +98,7 @@ cd <directory name>
 ```
 
 `<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
-It's like `C:\Users\user\Documents\4U\4U 0.0.0`
+It's like `C:\Users\user\Documents\src\4U 0.0.0`
 
 #### Linux
 
@@ -109,7 +109,7 @@ cd <directory name>
 ```
 
 `<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
-It's like `/home/user/Documents/4U/4U\ 0.0.0` (for with space, enter `\`).
+It's like `/home/user/Documents/src/4U\ 0.0.0` (for with space, enter `\`).
 
 ### 2: Compile the lexical analyzer
   
@@ -197,7 +197,7 @@ Thanks to [totodunet](https://github.com/totodunet).
 
 ## Logo
 
-If you have a logo, share it in discussions.
+![4U logo](/images/4U%20logo.svg "4U logo")
 
 ```text
    ____    _
