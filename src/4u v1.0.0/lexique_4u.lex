@@ -30,231 +30,235 @@ commentaire ((\<\/\>).*)
 
 %%
 
-"</"    {
-            /* un marqueur de debut de commentaire trouve -> on lui dit que le lexeme commentaire_1 commence */
-            BEGIN(commentaire_1);
-            printf("Commentaire detecte en ligne %i\n",lineno);
-        }
+"</"	{
+			/* un marqueur de debut de commentaire trouve -> on lui dit que le lexeme commentaire_1 commence */
+			BEGIN(commentaire_1);
+			printf("Commentaire detecte en ligne %i\n",lineno);
+		}
 
-<commentaire_1>"\n"     {
-                            /* si on trouve des retours chariots et que la condition de demarrage est commentaire_1, alors on incremente la variable lineno. sans cela, on serait en decalage pour la suite de l'analyse */
-                            lineno++;
-                        }
+<commentaire_1>"\n"	{
+						/* si on trouve des retours chariots et que la condition de demarrage est commentaire_1, alors on incremente la variable lineno. sans cela, on serait en decalage pour la suite de l'analyse */
+						lineno++;
+					}
 
-<commentaire_1>"/"+">"      {
-                                /* si on au moins une fois "*" suivi de "/" et que la condition de demarrage est commentaire_1, alors on lui dit que le lexeme commentaire_1 est fini */
-                                BEGIN(INITIAL);
-                                printf("Fin du commentaire en ligne %i\n",lineno);
-                                return TOK_COMMENT;
-                            }
+<commentaire_1>"/"+">"	{
+							/* si on au moins une fois "*" suivi de "/" et que la condition de demarrage est commentaire_1, alors on lui dit que le lexeme commentaire_1 est fini */
+							BEGIN(INITIAL);
+							printf("Fin du commentaire en ligne %i\n",lineno);
+							return TOK_COMMENT;
+						}
 
-<commentaire_1>.    {/* les autres caracteres suivants la conditions de demarrage sont absorbes par l'analyse est donc ingores */}
+<commentaire_1>.	{/* les autres caracteres suivants la conditions de demarrage sont absorbes par l'analyse est donc ingores */}
 
-"<!--"      {
-                BEGIN(commentaire_2);
-                printf("Commentaire detecte en ligne %i\n",lineno);
-            }
-<commentaire_2>"\n"         {lineno++;}
-<commentaire_2>"-"+"-"+">"  {
-                                BEGIN(INITIAL);
-                                printf("Fin du commentaire en ligne %i\n",lineno);
-                                return TOK_COMMENT;
-                            }
-<commentaire_2>.            {}
+"<!--"	{
+			BEGIN(commentaire_2);
+			printf("Commentaire detecte en ligne %i\n",lineno);
+		}
+<commentaire_2>"\n"	{lineno++;}
+<commentaire_2>"-"+"-"+">"	{
+								BEGIN(INITIAL);
+								printf("Fin du commentaire en ligne %i\n",lineno);
+								return TOK_COMMENT;
+							}
+<commentaire_2>.	{}
 
-"\""         {
-                /* debut de la chaine de texte (premier guillemet) */
-                BEGIN(chaine);
-                yylval.texte=malloc(sizeof(char)*strlen(yytext));
-                if(yylval.texte==NULL){
-                    fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Probleme de memoire sur une chaine texte a la ligne %i !\n",lineno);
-                    exit(-1);
-                }
-                yylval.texte=strdup(yytext);
-                printf("Chaine de texte detectee en ligne %i\n",lineno);
-            }
+"\""	{
+			/* start of text string (first quote) */
+			BEGIN(chaine);
+			yylval.texte=malloc(sizeof(char)*strlen(yytext));
+			if(yylval.texte==NULL){
+				fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Probleme de memoire sur une chaine texte a la ligne %i !\n",lineno);
+				exit(-1);
+			}
+			yylval.texte=strdup(yytext);
+			printf("Chaine de texte detectee en ligne %i\n",lineno);
+		}
 
-<chaine>"\n"    {
-                    /* on prend en compte les sauts de ligne que l'on traduira par "\n" */
-                    lineno++;
-                    yylval.texte=(char*)concat(yylval.texte,"\\n");
-                    if(yylval.texte==NULL){
-                        fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Probleme de memoire sur une chaine texte a la ligne %i !\n",lineno);
-                        exit(-1);
-                    }
-                }
+<chaine>"\n"	{
+					/*we take into account the line breaks that we will translate by "\n" */
+					lineno++;
+					yylval.texte=(char*)concat(yylval.texte,"\\n");
+					if(yylval.texte==NULL){
+						fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Probleme de memoire sur une chaine texte a la ligne %i !\n",lineno);
+						exit(-1);
+					}
+				}
 
-<chaine>"\t"    {
-                    /* on prend en compte les tabulations que l'on traduira par "\t" */
-                    yylval.texte=(char*)concat(yylval.texte,"\\t");
-                    if(yylval.texte==NULL){
-                        fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Probleme de memoire sur une chaine texte a la ligne %i !\n",lineno);
-                        exit(-1);
-                    }
-                }
+<chaine>"\t"	{
+					/* we take into account the tabs that we will translate by "\t" */
+					yylval.texte=(char*)concat(yylval.texte,"\\t");
+					if(yylval.texte==NULL){
+						fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Probleme de memoire sur une chaine texte a la ligne %i !\n",lineno);
+						exit(-1);
+					}
+				}
 
-<chaine>"\\\""    {
-                    /* pour echapper le guillemet dans la chaine \" */
-                    yylval.texte=(char*)concat(yylval.texte,yytext);
-                    if(yylval.texte==NULL){
-                        fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Probleme de memoire sur une chaine texte a la ligne %i !\n",lineno);
-                        exit(-1);
-                    }
-                }
+<chaine>"\\\""	{
+					/* to escape the quote in the string \" */
+					yylval.texte=(char*)concat(yylval.texte,yytext);
+					if(yylval.texte==NULL){
+						fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Probleme de memoire sur une chaine texte a la ligne %i !\n",lineno);
+						exit(-1);
+					}
+				}
 
-<chaine>"\""     {
-                    /* fin de la chaine (deuxieme guillemet non echappe) */
-                    BEGIN(INITIAL);
-                    yylval.texte=(char*)concat(yylval.texte,yytext);
-                    if(yylval.texte==NULL){
-                        fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Probleme de memoire sur une chaine texte a la ligne %i !\n",lineno);
-                        exit(-1);
-                    }
-                    printf("Fin de la chaine en ligne %i\n",lineno);
-                    return TOK_TEXTE;
-                }
+<chaine>"\""	{
+					/* end of string (second unescaped quote) */
+					BEGIN(INITIAL);
+					yylval.texte=(char*)concat(yylval.texte,yytext);
+					if(yylval.texte==NULL){
+						fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Probleme de memoire sur une chaine texte a la ligne %i !\n",lineno);
+						exit(-1);
+					}
+					printf("Fin de la chaine en ligne %i\n",lineno);
+					return TOK_TEXTE;
+				}
 
-<chaine>.  {
-                /* les caracteres de la chaine */
-                yylval.texte=(char*)concat(yylval.texte,yytext);
-                if(yylval.texte==NULL){
-                        fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Probleme de memoire sur une chaine texte a la ligne %i !\n",lineno);
-                        exit(-1);
-                }
-            }
-            
+<chaine>.	{
+				/* les caracteres de la chaine */
+				yylval.texte=(char*)concat(yylval.texte,yytext);
+				if(yylval.texte==NULL){
+						fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Probleme de memoire sur une chaine texte a la ligne %i !\n",lineno);
+						exit(-1);
+				}
+			}
+			
 {decimal} {
-    sscanf(yytext, "%lf", &yylval.decimal);
-    return TOK_DECIMAL;
+	sscanf(yytext, "%lf", &yylval.decimal);
+	return TOK_DECIMAL;
 }
 
 {entier} {
-    sscanf(yytext, "%ld", &yylval.entier);
-    return TOK_ENTIER;
+	sscanf(yytext, "%ld", &yylval.entier);
+	return TOK_ENTIER;
 }
 
-"if"    {return TOK_SI;}
+"if"								{return TOK_SI;}
 
-"do"    {return TOK_ALORS;}
+"do"								{return TOK_ALORS;}
 
-"else"  {return TOK_SINON;}
+"else"  							{return TOK_SINON;}
 
-"++"    {return TOK_INCREMENTATION;}
+"++"								{return TOK_INCREMENTATION;}
 
-"--"    {return TOK_DECREMENTATION;}
+"--"								{return TOK_DECREMENTATION;}
 
-"+="    {return TOK_AFFECT_PLUS;}
+"+="								{return TOK_AFFECT_PLUS;}
 
-"-="    {return TOK_AFFECT_MOINS;}
+"-="								{return TOK_AFFECT_MOINS;}
 
-"*="    {return TOK_AFFECT_MUL;}
+"*="								{return TOK_AFFECT_MUL;}
 
-"/="    {return TOK_AFFECT_DIV;}
+"/="								{return TOK_AFFECT_DIV;}
 
-"%="    {return TOK_AFFECT_MOD;}
+"%="								{return TOK_AFFECT_MOD;}
 
-"&="    {return TOK_AFFECT_ET;}
+"&="								{return TOK_AFFECT_ET;}
 
-"|="    {return TOK_AFFECT_OU;}
+"|="								{return TOK_AFFECT_OU;}
 
-"egal a"|"equivalent a"|"=="        {return TOK_EQU;}
+"egal a"|"equivalent a"|"=="		{return TOK_EQU;}
 
-"different de"|"!="|"<>"            {return TOK_DIFF;}
+"different de"|"!="|"<>"			{return TOK_DIFF;}
 
-"superieur a"|"plus grand que"|">"  {return TOK_SUP;}
+"superieur a"|"plus grand que"|">"	{return TOK_SUP;}
 
-"inferieur a"|"plus petit que"|"<"  {return TOK_INF;}
+"inferieur a"|"plus petit que"|"<"	{return TOK_INF;}
 
-"superieur ou egal a"|">="          {return TOK_SUPEQU;}
+"superieur ou egal a"|">="			{return TOK_SUPEQU;}
 
-"inferieur ou egal a"|"<="          {return TOK_INFEQU;}
+"inferieur ou egal a"|"<="			{return TOK_INFEQU;}
 
-"compris dans"|"in"                 {return TOK_IN;}
+"compris dans"|"in"					{return TOK_IN;}
 
-"print"         {return TOK_AFFICHER;}
+"print"								{return TOK_AFFICHER;}
 
-"del"           {return TOK_SUPPR;}
+"del"								{return TOK_SUPPR;}
 
-"faire"         {return TOK_FAIRE;}
+"faire"								{return TOK_FAIRE;}
 
-"saisir"        {return TOK_SAISIR;}
+"input"								{return TOK_SAISIR;}
 
-"x"             {return TOK_CROIX;}
+"ƒ"|"funct"							{return TOK_FONCTION;}
 
-"="             {return TOK_AFFECT;}
+"return"							{return TOK_RETOUR;}
 
-"+"             {return TOK_PLUS;}
+"x"									{return TOK_CROIX;}
 
-"-"             {return TOK_MOINS;}
+"="									{return TOK_AFFECT;}
 
-"*"             {return TOK_MUL;}
+"+"									{return TOK_PLUS;}
 
-"/"             {return TOK_DIV;}
+"-"									{return TOK_MOINS;}
 
-"%"             {return TOK_MOD;}
+"*"|"×"								{return TOK_MUL;}
 
-"^"             {return TOK_PUISSANCE;}
+"/"									{return TOK_DIV;}
 
-"("             {return TOK_PARG;}
+"%"									{return TOK_MOD;}
 
-")"             {return TOK_PARD;}
+"^"									{return TOK_PUISSANCE;}
 
-"["             {return TOK_CROG;}
+"("									{return TOK_PARG;} // parentheses gauche
 
-"]"             {return TOK_CROD;}
+")"									{return TOK_PARD;} // parentheses droite
 
-"?"             {return TOK_POINT_INTERROGATION;}
+"["									{return TOK_CROG;}
 
-":"             {return TOK_DOUBLE_POINT;}
+"]"									{return TOK_CROD;}
 
-"and"            {return TOK_ET;}
+"?"									{return TOK_POINT_INTERROGATION;}
 
-"or"            {return TOK_OU;}
+":"									{return TOK_DOUBLE_POINT;}
 
-"not"|"!"           {return TOK_NON;}
+"and"|"&&"							{return TOK_ET;}
 
-";"             {return TOK_FINSTR;}
+"or"|"||"							{return TOK_OU;}
 
-"true"          {return TOK_VRAI;}
+"not"|"!"							{return TOK_NON;}
 
-"false"          {return TOK_FAUX;}
+";"									{return TOK_FINSTR;}
 
-"\n"            {lineno++;}
+"true"								{return TOK_VRAI;}
+
+"false"								{return TOK_FAUX;}
+
+"\n"								{lineno++;}
 
 {variable_booleenne} {
-    yylval.texte = yytext;
-    return TOK_VARB;
+	yylval.texte = yytext;
+	return TOK_VARB;
 }
 
 
 {variable_entiere} {
-    yylval.texte = yytext;
-    return TOK_VARE;
+	yylval.texte = yytext;
+	return TOK_VARE;
 }
 
 
 {variable_decimale} {
-    yylval.texte = yytext;
-    return TOK_VARD;
+	yylval.texte = yytext;
+	return TOK_VARD;
 }
 
 {variable_texte} {
-    yylval.texte = yytext;
-    return TOK_VART;
+	yylval.texte = yytext;
+	return TOK_VART;
 }
 
-{commentaire}   {
-    printf("Commentaire detecte en ligne %i\n",lineno);
-    printf("Fin du commentaire en ligne %i\n",lineno);
-    return TOK_COMMENT;
+{commentaire} {
+	printf("Commentaire detecte en ligne %i\n",lineno);
+	printf("Fin du commentaire en ligne %i\n",lineno);
+	return TOK_COMMENT;
 }
 
 " "|"\t" {}
 
 . {
-    fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Lexeme inconnu a la ligne %d. Il s'agit de %s et comporte %d lettre(s)\n",lineno,yytext,yyleng);
-    error_lexical=true;
-    return yytext[0];
+	fprintf(stderr,"\t\033[31m\033[01mERREUR\033[0m : Lexeme inconnu a la ligne %d. Il s'agit de %s et comporte %d lettre(s)\n",lineno,yytext,yyleng);
+	error_lexical=true;
+	return yytext[0];
 }
 
 %%
@@ -262,14 +266,14 @@ commentaire ((\<\/\>).*)
 /* fonction de concatenation - realloue la memoire a la variable texte dimensionne a la taille memoire du tableau de char ajout puis concatene */
 
 void* concat(char* texte, char* ajout){
-    void* p=NULL;
-    /* realloue la memoire -> taille de texte + taille de ajout + 1 (caractere de fin \0) */
-    if((p=realloc(texte,sizeof(char)*(strlen(texte)+strlen(ajout)+1)))){
-        texte=p;
-        return strcat(texte,ajout);
-    }else{
-        /* appel de la macro FREE pour liberer correctement la memoire */
-        FREE(texte);
-        return NULL;
-    }
+	void* p=NULL;
+	/* realloue la memoire -> taille de texte + taille de ajout + 1 (caractere de fin \0) */
+	if((p=realloc(texte,sizeof(char)*(strlen(texte)+strlen(ajout)+1)))){
+		texte=p;
+		return strcat(texte,ajout);
+	}else{
+		/* appel de la macro FREE pour liberer correctement la memoire */
+		FREE(texte);
+		return NULL;
+	}
 }

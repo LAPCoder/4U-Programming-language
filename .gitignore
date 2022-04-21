@@ -1,4 +1,6 @@
 *.exe
-commands/bin/
+commands/bin/**
 *.sublime-project
 *.sublime-workspace
+.vscode/**
+.git/**

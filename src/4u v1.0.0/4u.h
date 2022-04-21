@@ -16,9 +16,12 @@ extern bool error_lexical;
 FILE* fichier;
 
 /* Definition of C and JS code generation methods*/
-extern void debut_code(void);
-extern void genere_code(GNode*);
-extern void fin_code(void);
+extern void debut_code_c(void);
+extern void debut_code_js(void);
+extern void genere_code_c(GNode*);
+extern void genere_code_js(GNode*);
+extern void fin_code_c(void);
+extern void fin_code_js(void);
 
 /* Definition of possible code sequences for the AST (Syntactic Tree). Each code sequence is associated with a number. These are all the possible nodes of the AST.*/
 #define CODE_VIDE			0
@@ -55,10 +58,10 @@ extern void fin_code(void);
 #define SI					31
 #define SINON				32
 #define NEGATIF				33
-#define BLOC_CODE  			34
+#define BLOC_CODE			34
 #define MODULO				35
 #define AFFECTATION_PLUS	36
-#define AFFECTATION_MOINS   37
+#define AFFECTATION_MOINS	37
 #define AFFECTATION_MUL		38
 #define AFFECTATION_DIV		39
 #define AFFECTATION_MOD		40
@@ -91,3 +94,5 @@ extern void fin_code(void);
 #define DEF_VAR				67
 #define AFFECTATION_PUI		68
 #define PUISSANCE			69
+#define FUNCTION			70
+#define RETURN				71
