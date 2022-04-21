@@ -15,7 +15,7 @@ extern bool error_lexical;
 /*The stream of our final output file*/
 FILE* fichier;
 
-/* Definition of C code generation methods*/
+/* Definition of C and JS code generation methods*/
 extern void debut_code(void);
 extern void genere_code(GNode*);
 extern void fin_code(void);
