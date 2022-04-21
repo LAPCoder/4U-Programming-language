@@ -1,6 +1,7 @@
 # 4U (Programming language)
 
-It's [*my* (LAPCoder)](https://github.com/LAPCoder) programming language.
+It's [*my* (@LAPCoder)](https://github.com/LAPCoder) programming language.
+Thanks [@Yagi-404](https://github.com/yagi-404) for his (big) help.
 <!-- (Please put a ⭐ if you like it 😀!) -->
 
 [![GitHub release](https://img.shields.io/github/v/release/LAPCoder/4U-Programming-Language?include_prereleases)](https://github.com/LAPCoder/4U-Programming-language/releases)
@@ -93,8 +94,8 @@ If you want to execute example-program, just go to step 1 and 7. -->
 
 On Windows, enter this command:
 
-```batch
-cd <directory name>
+```bat
+> cd <directory name>
 ```
 
 `<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
@@ -105,7 +106,7 @@ It's like `C:\Users\user\Documents\src\4U 0.0.0`
 On Linux, enter this command:
 
 ```bash
-cd <directory name>
+> cd <directory name>
 ```
 
 `<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
@@ -116,7 +117,7 @@ It's like `/home/user/Documents/src/4U\ 0.0.0` (for with space, enter `\`).
 Enter this command (if you use `flex`):
 
 ```bash
-flex -o lexique_4u.c lexique_4u.lex
+> flex -o lexique_4u.c lexique_4u.lex
 ```
 
 ### 3: Compile the syntax analyzer
@@ -124,53 +125,77 @@ flex -o lexique_4u.c lexique_4u.lex
 Enter this command (if you use `bison`):
 
 ```bash
-bison -d syntax_4u.y
+> bison -d syntax_4u.y
 ```
 
 ### 4: Compile the compiler
+
+#### Before v1.0.0
   
-Enter this command (if you use `gcc`):
+Enter this command (if you use `gcc`) to compile the compiler:
 
 ```bash
-gcc lexique_4u.c syntax_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
+> gcc lexique_4u.c syntax_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
+```
+
+#### After v1.0.0
+
+Enter this command (if you use `gcc`) to compile the compiler:
+
+```bash
+> gcc lexique_4u.c syntax_4u.tab.c generation_code_c.c generation_code_js.c `pkg-config --cflags --libs glib-2.0` -o 4u
 ```
 
 ### 5: Execute the 4U program
 
-Enter this command (if you use `gcc`) in a terminal:
+Enter this command (if you use `gcc`) in a terminal to transform the 4U code in C:
 
 ```bash
-./4u program.4u
+> ./4u program.4u
 ```
 
 `<program.4u>` is the name of your program.
 
 ### 6: Compile the program
 
-Enter this command:
+Enter this command to compile the C program:
 
 ```bash
-gcc program.c
+> gcc program.c
 ```
 
 `<program.c>` is the name of your program (compiled).
 
 ### 7: Compile the program
 
-Enter this command:
+#### Windows
+
+Enter this command to run the compiled program:
+
+```bat
+> ./a.exe
+```
+
+#### Linux
+
+Enter this command to run the compiled program:
 
 ```bash
-./a.out
+> ./a.out
 ```
+
+### End
 
 It's OK! Your code was executed! If you want to re-execute your code (and it's not changed), you can just do this command (step 7).
 Else, you can execute (if you want):
 
 ```bash
-cd
+> cd
 ```
 
 ## Compile Command
+
+### Windows
 
 To compile command, here is a simple way to do it on Windows. Go to the 4U command file and type:
 
@@ -179,17 +204,21 @@ To compile command, here is a simple way to do it on Windows. Go to the 4U comma
 > gcc *.c -o bin/4U
 ```
 
-It will create an executable. If you want to use it all days, I really recommend add the `bin/` folder into the PATH.
+It will create an executable. If you want to use it all days, we really recommend add the `bin/` folder into the PATH.
 
 Whatever, if you want a normal installation of the 4U command (without compiling),
-I'll put an executable file in our website soon. You need to put it in a folder that you added to PATH.
+We'll put an executable file in our website soon. You need to put it in a folder that you added to PATH.
+
+### Linux
+
+Sorry, at the moment ***commands are not tested for Linux***. You can try compiling them with `gcc`.
 
 **AT THE TIME, THE COMMAND DOESN'T WORK. WE HIGHLY RECOMMEND NOT INSTALLING NOW. IT'S COMING SOON, BUT AT THE TIME IT'S IN BETA.**
 
 ## Source
 
-I use [this](https://totodu.net/Compilation/Compilation) tutorial.
-Thanks to [totodunet](https://github.com/totodunet).
+We use [this](https://totodu.net/Compilation/Compilation) tutorial.
+Thanks to [@totodunet](https://github.com/totodunet).
 
 ## QR Code
 
@@ -197,7 +226,7 @@ Thanks to [totodunet](https://github.com/totodunet).
 
 ## Logo
 
-![4U logo](/images/4U%20logo.svg "4U logo")
+<img alt="4U logo" src="/images/4U%20logo.svg" style="height: 200px;" title="4U logo" />
 
 ```text
    ____    _
