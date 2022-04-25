@@ -1,0 +1,89 @@
+# Don't see it for the moment
+
+@@ ::= <instruction> @@ | <none>
+
+<code > ::= <code > | <condition> | commentaire
+
+<instruction> ::= <affectation> | <affichage> | <boucle_for> | <boucle_while> | <boucle_do_while>
+ 
+<expression> ::= <expression_booleenne> | <expression_arithmetique>
+ 
+<variable> ::= variable_booleenne | variable_arithmetique
+
+<affectation> ::= ( variable_arithmetique "=" <expression_arithmetique> | variable_booleenne "=" <expression_booleenne> ) ";"
+<affichage> ::= "print" <expression> ";"
+<suppression> ::= "del" variable_texte ";"
+
+<expression_booleenne> ::= variable | "true" | "false" | <et> | <ou> | <non> 
+									| "(" <expression_booleenne> ")" | <egal> 
+									| <inferieur> | <superieur> | <different> 
+									| <inclus> | <inferieur_egal> | <superieur_egal>
+<expression_texte> ::= variable_texte | texte
+<expression_arithmetique> ::= <expression_arithmetique>
+							| variable_arithmetique 
+							| number 
+							| <addition> 
+							| <soustraction> 
+							| <multiplication> 
+							| <division> 
+							| "(" <expression_arithmetique> ")" 
+							| "-" <expression_arithmetique> 
+							| <expression_arithmetique> "%" <expression_arithmetique> 
+							| <expression_arithmetique> "++" 
+							| <expression_arithmetique> "--"
+
+<egal> ::= <expression_booleenne> "==" <expression_booleenne> 
+		| <expression_arithmetique> "==" <expression_arithmetique> 
+		| <expression_booleenne> "egal a" <expression_booleenne> 
+		| <expression_arithmetique> "egal a" <expression_arithmetique>
+
+<inferieur> ::= <expression_arithmetique> "<" <expression_arithmetique> 
+			| <expression_arithmetique> "inferieur a" <expression_arithmetique>
+<superieur> ::= <expression_arithmetique> ">" <expression_arithmetique> 
+			| <expression_arithmetique> "superieur a" <expression_arithmetique>
+<different> ::= <expression_booleenne> "!=" <expression_booleenne> 
+			| <expression_arithmetique> "!=" <expression_arithmetique> 
+			| <expression_booleenne> "<>" <expression_booleenne> 
+			| <expression_arithmetique> "<>" <expression_arithmetique> 
+			| <expression_booleenne> "different de" <expression_booleenne> 
+			| <expression_arithmetique> "different de" <expression_arithmetique>
+<inferieur_egal> ::= <expression_arithmetique> "<=" <expression_arithmetique> 
+			| <expression_arithmetique> "inferieur ou egal a" <expression_arithmetique>
+<superieur_egal> ::= <expression_arithmetique> ">=" <expression_arithmetique> 
+			| <expression_arithmetique> "superieur ou egal a" <expression_arithmetique>
+
+<inclus> ::= <expression_arithmetique> "in" <crochet> <expression_arithmetique> ";" <expression_arithmetique> <crochet> 
+			| <expression_arithmetique> "is in" <crochet> <expression_arithmetique> ";" <expression_arithmetique> <crochet>
+
+<crochet> ::= "[" | "]"
+
+<addition> ::= <expression_arithmetique> "+" <expression_arithmetique>
+<soustraction> ::= <expression_arithmetique> "-" <expression_arithmetique>
+<multiplication> ::= <expression_arithmetique> "*" <expression_arithmetique>
+<division> ::= <expression_arithmetique> "/" <expression_arithmetique>
+ 
+<et> ::= <expression_booleenne> ( "and" | "&&" ) <expression_booleenne>
+<ou> ::= <expression_booleenne> ( "or" | "||" ) <expression_booleenne>
+<non> ::= "not" | "!" <expression_booleenne>
+
+<condition> ::= <condition_si> [<condition_sinon>] ";" 
+			| "(" <expression_booleenne> ")" "?" <code > ":" <code > ";"
+<condition_si> ::= "if" <expression_booleenne> "do" <code >
+<condition_sinon> ::= "else" <code >
+
+<boucle_for> ::= "(" <expression_arithmetique> ")" "x" <code > ";"
+<boucle_while> ::= "(" <expression_booleenne> ")" "?" <code > ";"
+<boucle_do while> ::= "do" <code > "?" "(" <expression_booleenne> ")" ";"
+
+<affectation> ::= <affectation>
+				| variable_texte "=" <expression_texte> ";"
+				| variable_texte "+=" <expression_texte> ";"
+				| variable_arithmetique "+=" <expression_arithmetique> ";"
+				| variable_arithmetique "-=" <expression_arithmetique> ";"
+				| variable_arithmetique "*=" <expression_arithmetique> ";"
+				| variable_arithmetique "/=" <expression_arithmetique> ";"
+				| variable_arithmetique "%=" <expression_arithmetique> ";"
+				| variable_booleenne "&=" <expression_boolenne> ";"
+				| variable_booleenne "|=" <expression_boolenne> ";"
+				| variable_arithmetique "++" ";"
+				| variable_arithmetique "--" ";"
