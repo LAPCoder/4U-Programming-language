@@ -11,9 +11,9 @@ char* _tsaisie;
 
 int main(void){
 	printf("%s","Bonjour le monde ! (oui on est en France ici, pas de Hallo Welt !!)\n");
-	char* tphrase_de_thomas=malloc(sizeof(char)*(strlen("Thomas a dit :\n\n\"J'aime bien la science-fiction et les dessins animés Disney !\".\n\nMais voilà on s'en fiche un peu...\n\n")+1));
+	char tphrase_de_thomas=malloc(tphrase_de_thomas,sizeof(char)*(strlen("Thomas a dit :\n\n\"J'aime bien la science-fiction et les dessins animés Disney !\".\n\nMais voilà on s'en fiche un peu...\n\n")+1));
 	if(tphrase_de_thomas==NULL){
-	printf("Erreur d'allocation memoire sur la variable tphrase_de_thomas !");
+	printf("\033[31m\033[01mERREUR\033[0m de reallocation memoire sur la variable tphrase_de_thomas !");
 	exit(-1);
 	}
 	strcpy(tphrase_de_thomas,"Thomas a dit :\n\n\"J'aime bien la science-fiction et les dessins animés Disney !\".\n\nMais voilà on s'en fiche un peu...\n\n");
