@@ -1,8 +1,8 @@
 # 4U (Programming language)
 
-It's [*my* (@LAPCoder)](https://github.com/LAPCoder) programming language.
+The 4U is created by [@LAPCoder](https://github.com/LAPCoder).
+It's a programming language.
 Thanks [@Yagi-404](https://github.com/yagi-404) for his (big) help.
-<!-- (Please put a ⭐ if you like it 😀!) -->
 
 [![GitHub release](https://img.shields.io/github/v/release/LAPCoder/4U-Programming-Language?include_prereleases)](https://github.com/LAPCoder/4U-Programming-language/releases)
 [![License](https://img.shields.io/badge/license-CC--BY--NC--SA-green)](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md)
@@ -85,8 +85,10 @@ Met le ici
 ## How to use
 
 You must have `gcc`, `bison` or `yacc`, `flex` or `lex` and `glib`.
-<!-- If you want not modify, you must have `gcc`, and go to step 1, 5, 6 and 7.
-If you want to execute example-program, just go to step 1 and 7. -->
+
+---
+> **Warning!** For all commands, do not enter the `$`!
+---
 
 ### 1: Go to your directory
 
@@ -95,29 +97,29 @@ If you want to execute example-program, just go to step 1 and 7. -->
 On Windows, enter this command:
 
 ```bat
-> cd <directory name>
+$ cd <directory name>
 ```
 
 `<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
-It's like `C:\Users\user\Documents\src\4U 0.0.0`
+The path is like `C:\Users\user\Documents\src\'4U 0.0.0'`
 
 #### Linux
 
 On Linux, enter this command:
 
 ```bash
-> cd <directory name>
+$ cd <directory name>
 ```
 
 `<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
-It's like `/home/user/Documents/src/4U\ 0.0.0` (for with space, enter `\`).
+The path is like `/home/user/Documents/src/'4U 0.0.0'` or `~/Documents/src/'4U 0.0.0'`.
 
 ### 2: Compile the lexical analyzer
   
 Enter this command (if you use `flex`):
 
 ```bash
-> flex -o lexique_4u.c lexique_4u.lex
+$ flex -o lexique_4u.c lexique_4u.lex
 ```
 
 ### 3: Compile the syntax analyzer
@@ -125,25 +127,25 @@ Enter this command (if you use `flex`):
 Enter this command (if you use `bison`):
 
 ```bash
-> bison -d syntax_4u.y
+$ bison -d syntax_4u.y
 ```
 
 ### 4: Compile the compiler
 
-#### Before v1.0.0
+#### v0.x.x
   
 Enter this command (if you use `gcc`) to compile the compiler:
 
 ```bash
-> gcc lexique_4u.c syntax_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
+$ gcc lexique_4u.c syntax_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
 ```
 
-#### After v1.0.0
+#### v1.x.x
 
 Enter this command (if you use `gcc`) to compile the compiler:
 
 ```bash
-> gcc lexique_4u.c syntax_4u.tab.c generation_code_c.c generation_code_js.c `pkg-config --cflags --libs glib-2.0` -o 4u
+$ gcc lexique_4u.c syntax_4u.tab.c generation_code_c.c generation_code_js.c `pkg-config --cflags --libs glib-2.0` -o 4u
 ```
 
 ### 5: Execute the 4U program
@@ -151,7 +153,7 @@ Enter this command (if you use `gcc`) to compile the compiler:
 Enter this command (if you use `gcc`) in a terminal to transform the 4U code in C:
 
 ```bash
-> ./4u program.4u
+$ ./4u program.4u
 ```
 
 `<program.4u>` is the name of your program.
@@ -161,7 +163,7 @@ Enter this command (if you use `gcc`) in a terminal to transform the 4U code in 
 Enter this command to compile the C program:
 
 ```bash
-> gcc program.c
+$ gcc program.c
 ```
 
 `<program.c>` is the name of your program (compiled).
@@ -173,7 +175,7 @@ Enter this command to compile the C program:
 Enter this command to run the compiled program:
 
 ```bat
-> ./a.exe
+$ ./a.exe
 ```
 
 #### Linux
@@ -181,27 +183,31 @@ Enter this command to run the compiled program:
 Enter this command to run the compiled program:
 
 ```bash
-> ./a.out
+$ ./a.out
 ```
 
-### End
+### 8: End
 
 It's OK! Your code was executed! If you want to re-execute your code (and it's not changed), you can just do this command (step 7).
 Else, you can execute (if you want):
 
 ```bash
-> cd
+$ cd
 ```
 
 ## Compile Command
+
+**AT THE TIME, THE COMMAND DOESN'T WORK. WE HIGHLY RECOMMEND NOT INSTALLING NOW. IT'S COMING SOON, BUT AT THE TIME IT'S IN BETA.**
+
+You can go [here](/commands) for more informations.
 
 ### Windows
 
 To compile command, here is a simple way to do it on Windows. Go to the 4U command file and type:
 
 ```bat
-> mkdir bin
-> gcc *.c -o bin/4U
+$ mkdir bin
+$ gcc *.c -o bin/4U
 ```
 
 It will create an executable. If you want to use it all days, we really recommend add the `bin/` folder into the PATH.
@@ -213,9 +219,7 @@ We'll put an executable file in our website soon. You need to put it in a folder
 
 Sorry, at the moment ***commands are not tested for Linux***. You can try compiling them with `gcc`.
 
-**AT THE TIME, THE COMMAND DOESN'T WORK. WE HIGHLY RECOMMEND NOT INSTALLING NOW. IT'S COMING SOON, BUT AT THE TIME IT'S IN BETA.**
-
-## Source
+## Thanks
 
 We use [this](https://totodu.net/Compilation/Compilation) tutorial.
 Thanks to [@totodunet](https://github.com/totodunet).
