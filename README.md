@@ -5,7 +5,7 @@ It's a programming language.
 Thanks [@Yagi-404](https://github.com/yagi-404) for his (big) help.
 
 [![GitHub release](https://img.shields.io/github/v/release/LAPCoder/4U-Programming-Language?include_prereleases)](https://github.com/LAPCoder/4U-Programming-language/releases)
-[![License](https://img.shields.io/badge/license-CC--BY--NC--SA-green)](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md)
+[![License](https://img.shields.io/badge/license-CC--BY--NC--SA--4.0-green)](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md)
 [![Downloads](https://img.shields.io/github/downloads/LAPCoder/4U-Programming-language/total)](https://github.com/LAPCoder/4U-Programming-language/tags)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/LAPCoder/4U-Programming-Language/main)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/LAPCoder/4U-Programming-Language)
@@ -21,8 +21,9 @@ Thanks [@Yagi-404](https://github.com/yagi-404) for his (big) help.
 ![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Flapcoder.github.io%2F4U-Programming-language%2F)
 [![Code Scanning - Action](https://github.com/LAPCoder/4U-Programming-Language/workflows/Code%20Scanning%20-%20Action/badge.svg)](https://github.com/LAPCoder/4U-Programming-Language/actions?query=workflow:"Code+Scanning+-+Action")
 ![Lines of code](https://img.shields.io/tokei/lines/github/lapcoder/4U-Programming-language)
+![GitHub last commit](https://img.shields.io/github/last-commit/lapcoder/4u-programming-language)
 
-[![Shield.io](https://img.shields.io/badge/Make%20with-https%3A%2F%2Fshields.io%2F-informational)](https://shields.io)
+<!--[![Shield.io](https://img.shields.io/badge/Make%20with-https%3A%2F%2Fshields.io%2F-informational)](https://shields.io)-->
 
 ```text
                        _____   _____   _____   _____    ___    _   _   _   _   _____   _   _   _____ 
@@ -87,7 +88,7 @@ Met le ici
 You must have `gcc`, `bison` or `yacc`, `flex` or `lex` and `glib`.
 
 ---
-> **Warning!** For all commands, do not enter the `$`!
+> **Warning!** For all commands, do not enter the `$` or the `>`!
 ---
 
 ### 1: Go to your directory
@@ -97,7 +98,7 @@ You must have `gcc`, `bison` or `yacc`, `flex` or `lex` and `glib`.
 On Windows, enter this command:
 
 ```bat
-$ cd <directory name>
+> cd <directory name>
 ```
 
 `<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
@@ -175,7 +176,7 @@ $ gcc program.c
 Enter this command to run the compiled program:
 
 ```bat
-$ ./a.exe
+> ./a.exe
 ```
 
 #### Linux
@@ -206,18 +207,18 @@ You can go [here](/commands) for more informations.
 To compile command, here is a simple way to do it on Windows. Go to the 4U command file and type:
 
 ```bat
-$ mkdir bin
-$ gcc *.c -o bin/4U
+> mkdir bin
+> gcc *.c -o bin/4U
 ```
 
 It will create an executable. If you want to use it all days, we really recommend add the `bin/` folder into the PATH.
 
 Whatever, if you want a normal installation of the 4U command (without compiling),
-We'll put an executable file in our website soon. You need to put it in a folder that you added to PATH.
+we'll put an executable file in our website soon. You need to put it in a folder that you added to PATH.
 
 ### Linux
 
-Sorry, at the moment ***commands are not tested for Linux***. You can try compiling them with `gcc`.
+Sorry, at the moment ***commands are not tested for Linux***. But you can try compiling them with `gcc`.
 
 ## Thanks
 
@@ -232,14 +233,14 @@ Thanks to [@totodunet](https://github.com/totodunet).
 
 <img alt="4U logo" src="/images/4U%20logo.svg" style="height: 200px;" title="4U logo" />
 
-```text
+<!--```text
    ____    _
   / _  |  | |
  / / | |  | |
 / /__| |  | |
 |____  \__/ |
       \____/
-```
+```-->
 
 ## LICENSE
 
