@@ -88,17 +88,17 @@ Met le ici
 You must have `gcc`, `bison` or `yacc`, `flex` or `lex` and `glib`.
 
 ---
-> **Warning!** For all commands, do not enter the `$` or the `>`!
+> **Warning!** For all commands, do not enter the `$`, the `#` or the `C:\>`!
 ---
 
 ### 1: Go to your directory
 
 #### Windows
 
-On Windows, enter this command:
+On Windows, type this command:
 
 ```bat
-> cd <directory name>
+cd <directory name>
 ```
 
 `<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
@@ -106,10 +106,10 @@ The path is like `C:\Users\user\Documents\src\'4U 0.0.0'`
 
 #### Linux
 
-On Linux, enter this command:
+On Linux, type this command:
 
 ```bash
-$ cd <directory name>
+cd <directory name>
 ```
 
 `<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
@@ -117,54 +117,54 @@ The path is like `/home/user/Documents/src/'4U 0.0.0'` or `~/Documents/src/'4U 0
 
 ### 2: Compile the lexical analyzer
   
-Enter this command (if you use `flex`):
+Type this command (if you use `flex`):
 
 ```bash
-$ flex -o lexique_4u.c lexique_4u.lex
+flex -o lexique_4u.c lexique_4u.lex
 ```
 
 ### 3: Compile the syntax analyzer
-  
-Enter this command (if you use `bison`):
+
+Type this command (if you use `bison`):
 
 ```bash
-$ bison -d syntax_4u.y
+bison -d syntax_4u.y
 ```
 
 ### 4: Compile the compiler
 
 #### v0.x.x
   
-Enter this command (if you use `gcc`) to compile the compiler:
+Type this command (if you use `gcc`) to compile the compiler:
 
 ```bash
-$ gcc lexique_4u.c syntax_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
+gcc lexique_4u.c syntax_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
 ```
 
 #### v1.x.x
 
-Enter this command (if you use `gcc`) to compile the compiler:
+Type this command (if you use `gcc`) to compile the compiler:
 
 ```bash
-$ gcc lexique_4u.c syntax_4u.tab.c generation_code_c.c generation_code_js.c `pkg-config --cflags --libs glib-2.0` -o 4u
+gcc lexique_4u.c syntax_4u.tab.c generation_code_c.c generation_code_js.c `pkg-config --cflags --libs glib-2.0` -o 4u
 ```
 
 ### 5: Execute the 4U program
 
-Enter this command (if you use `gcc`) in a terminal to transform the 4U code in C:
+Type this command (if you use `gcc`) in a terminal to transform the 4U code in C:
 
 ```bash
-$ ./4u program.4u
+./4u program.4u
 ```
 
 `<program.4u>` is the name of your program.
 
 ### 6: Compile the program
 
-Enter this command to compile the C program:
+Type this command to compile the C program:
 
 ```bash
-$ gcc program.c
+gcc program.c
 ```
 
 `<program.c>` is the name of your program (compiled).
@@ -173,18 +173,18 @@ $ gcc program.c
 
 #### Windows
 
-Enter this command to run the compiled program:
+Type this command to run the compiled program:
 
 ```bat
-> ./a.exe
+./a.exe
 ```
 
 #### Linux
 
-Enter this command to run the compiled program:
+Type this command to run the compiled program:
 
 ```bash
-$ ./a.out
+./a.out
 ```
 
 ### 8: End
@@ -193,7 +193,7 @@ It's OK! Your code was executed! If you want to re-execute your code (and it's n
 Else, you can execute (if you want):
 
 ```bash
-$ cd
+cd
 ```
 
 ## Compile Command
@@ -207,8 +207,9 @@ You can go [here](/commands) for more informations.
 To compile command, here is a simple way to do it on Windows. Go to the 4U command file and type:
 
 ```bat
-> mkdir bin
-> gcc *.c -o bin/4U
+C:\> mkdir bin
+
+C:\> gcc *.c -o bin/4U
 ```
 
 It will create an executable. If you want to use it all days, we really recommend add the `bin/` folder into the PATH.
