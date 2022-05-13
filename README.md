@@ -1,10 +1,11 @@
 # 4U (Programming language)
 
-It's [*my* (LAPCoder)](https://github.com/LAPCoder) programming language.
-<!-- (Please put a ⭐ if you like it 😀!) -->
+The 4U is created by [@LAPCoder](https://github.com/LAPCoder).
+It's a programming language.
+Thanks [@Yagi-404](https://github.com/yagi-404) for his (big) help.
 
 [![GitHub release](https://img.shields.io/github/v/release/LAPCoder/4U-Programming-Language?include_prereleases)](https://github.com/LAPCoder/4U-Programming-language/releases)
-[![License](https://img.shields.io/badge/license-CC--BY--NC--SA-green)](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md)
+[![License](https://img.shields.io/badge/license-CC--BY--NC--SA--4.0-green)](https://github.com/LAPCoder/4U-Programming-language/blob/main/LICENSE.md)
 [![Downloads](https://img.shields.io/github/downloads/LAPCoder/4U-Programming-language/total)](https://github.com/LAPCoder/4U-Programming-language/tags)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/LAPCoder/4U-Programming-Language/main)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/LAPCoder/4U-Programming-Language)
@@ -20,8 +21,9 @@ It's [*my* (LAPCoder)](https://github.com/LAPCoder) programming language.
 ![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Flapcoder.github.io%2F4U-Programming-language%2F)
 [![Code Scanning - Action](https://github.com/LAPCoder/4U-Programming-Language/workflows/Code%20Scanning%20-%20Action/badge.svg)](https://github.com/LAPCoder/4U-Programming-Language/actions?query=workflow:"Code+Scanning+-+Action")
 ![Lines of code](https://img.shields.io/tokei/lines/github/lapcoder/4U-Programming-language)
+![GitHub last commit](https://img.shields.io/github/last-commit/lapcoder/4u-programming-language)
 
-[![Shield.io](https://img.shields.io/badge/Make%20with-https%3A%2F%2Fshields.io%2F-informational)](https://shields.io)
+<!--[![Shield.io](https://img.shields.io/badge/Make%20with-https%3A%2F%2Fshields.io%2F-informational)](https://shields.io)-->
 
 ```text
                        _____   _____   _____   _____    ___    _   _   _   _   _____   _   _   _____ 
@@ -37,11 +39,12 @@ It's [*my* (LAPCoder)](https://github.com/LAPCoder) programming language.
 ## What is it?
 
 This is not only a programming language. It will be a code editor, a programming language, a doc, an IDE, an ODE, an extension for VS Code…
+The VS Code extension [is here](https://github.com/LAPCoder/2HOT4U).
 
 ## The Latest version
 
-V0.0.1 is the latest version.
-V1.0.0 is in development.
+v0.0.1 is the latest version.
+v1.0.0 is in development (go in in-dev branch).
 
 ## Objective
 
@@ -84,60 +87,72 @@ Met le ici
 ## How to use
 
 You must have `gcc`, `bison` or `yacc`, `flex` or `lex` and `glib`.
-<!-- If you want not modify, you must have `gcc`, and go to step 1, 5, 6 and 7.
-If you want to execute example-program, just go to step 1 and 7. -->
+
+---
+> **Warning!** For all commands, do not enter the `$`, the `#` or the `C:\>`!
+---
 
 ### 1: Go to your directory
 
 #### Windows
 
-On Windows, enter this command:
+On Windows, type this command:
 
-```batch
+```bat
 cd <directory name>
 ```
 
 `<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
-It's like `C:\Users\user\Documents\src\4U 0.0.0`
+The path is like `C:\Users\user\Documents\src\'4U 0.0.0'`
 
 #### Linux
 
-On Linux, enter this command:
+On Linux, type this command:
 
 ```bash
 cd <directory name>
 ```
 
 `<directory name>` is the directory where you installed folder "4u vX.X.X" (X.X.X is your version number).
-It's like `/home/user/Documents/src/4U\ 0.0.0` (for with space, enter `\`).
+The path is like `/home/user/Documents/src/'4U 0.0.0'` or `~/Documents/src/'4U 0.0.0'`.
 
 ### 2: Compile the lexical analyzer
   
-Enter this command (if you use `flex`):
+Type this command (if you use `flex`):
 
 ```bash
 flex -o lexique_4u.c lexique_4u.lex
 ```
 
 ### 3: Compile the syntax analyzer
-  
-Enter this command (if you use `bison`):
+
+Type this command (if you use `bison`):
 
 ```bash
 bison -d syntax_4u.y
 ```
 
 ### 4: Compile the compiler
+
+#### v0.x.x
   
-Enter this command (if you use `gcc`):
+Type this command (if you use `gcc`) to compile the compiler:
 
 ```bash
 gcc lexique_4u.c syntax_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
 ```
 
+#### v1.x.x
+
+Type this command (if you use `gcc`) to compile the compiler:
+
+```bash
+gcc lexique_4u.c syntax_4u.tab.c generation_code_c.c generation_code_js.c `pkg-config --cflags --libs glib-2.0` -o 4u
+```
+
 ### 5: Execute the 4U program
 
-Enter this command (if you use `gcc`) in a terminal:
+Type this command (if you use `gcc`) in a terminal to transform the 4U code in C:
 
 ```bash
 ./4u program.4u
@@ -147,7 +162,7 @@ Enter this command (if you use `gcc`) in a terminal:
 
 ### 6: Compile the program
 
-Enter this command:
+Type this command to compile the C program:
 
 ```bash
 gcc program.c
@@ -157,11 +172,23 @@ gcc program.c
 
 ### 7: Compile the program
 
-Enter this command:
+#### Windows
+
+Type this command to run the compiled program:
+
+```bat
+./a.exe
+```
+
+#### Linux
+
+Type this command to run the compiled program:
 
 ```bash
 ./a.out
 ```
+
+### 8: End
 
 It's OK! Your code was executed! If you want to re-execute your code (and it's not changed), you can just do this command (step 7).
 Else, you can execute (if you want):
@@ -172,24 +199,33 @@ cd
 
 ## Compile Command
 
+**AT THE TIME, THE COMMAND DOESN'T WORK. WE HIGHLY RECOMMEND NOT INSTALLING NOW. IT'S COMING SOON, BUT AT THE TIME IT'S IN BETA.**
+
+You can go [here](/commands) for more informations.
+
+### Windows
+
 To compile command, here is a simple way to do it on Windows. Go to the 4U command file and type:
 
 ```bat
-> mkdir bin
-> gcc *.c -o bin/4U
+C:\> mkdir bin
+
+C:\> gcc *.c -o bin/4U
 ```
 
-It will create an executable. If you want to use it all days, I really recommend add the `bin/` folder into the PATH.
+It will create an executable. If you want to use it all days, we really recommend add the `bin/` folder into the PATH.
 
 Whatever, if you want a normal installation of the 4U command (without compiling),
-I'll put an executable file in our website soon. You need to put it in a folder that you added to PATH.
+we'll put an executable file in our website soon. You need to put it in a folder that you added to PATH.
 
-**AT THE TIME, THE COMMAND DOESN'T WORK. WE HIGHLY RECOMMEND NOT INSTALLING NOW. IT'S COMING SOON, BUT AT THE TIME IT'S IN BETA.**
+### Linux
 
-## Source
+Sorry, at the moment ***commands are not tested for Linux***. But you can try compiling them with `gcc`.
 
-I use [this](https://totodu.net/Compilation/Compilation) tutorial.
-Thanks to [totodunet](https://github.com/totodunet).
+## Thanks
+
+We use [this](https://totodu.net/Compilation/Compilation) tutorial.
+Thanks to [@totodunet](https://github.com/totodunet).
 
 ## QR Code
 
@@ -197,16 +233,16 @@ Thanks to [totodunet](https://github.com/totodunet).
 
 ## Logo
 
-![4U logo](/images/4U%20logo.svg "4U logo")
+<img alt="4U logo" src="/images/4U%20logo.svg" style="height: 200px;" title="4U logo" />
 
-```text
+<!--```text
    ____    _
   / _  |  | |
  / / | |  | |
 / /__| |  | |
 |____  \__/ |
       \____/
-```
+```-->
 
 ## LICENSE
 
