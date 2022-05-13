@@ -39,11 +39,12 @@ Thanks [@Yagi-404](https://github.com/yagi-404) for his (big) help.
 ## What is it?
 
 This is not only a programming language. It will be a code editor, a programming language, a doc, an IDE, an ODE, an extension for VS Code…
+The VS Code extension [is here](https://github.com/LAPCoder/2HOT4U).
 
 ## The Latest version
 
-V0.0.1 is the latest version.
-V1.0.0 is in development.
+v0.0.1 is the latest version.
+v1.0.0 is in development (go in in-dev branch).
 
 ## Objective
 
