@@ -229,7 +229,7 @@ Thanks to [@totodunet](https://github.com/totodunet).
 
 ## QR Code
 
-![QR code](https://raw.githubusercontent.com/Yagi-404/PY-QR/main/src/4U%20Programming%20Language.qr.png "Scan it!")
+![QR code](https://raw.githubusercontent.com/Yagi-404/PY-QR/c90bce6bd3b1b1bbf299176b69b3e4bd151dbd48/src/4U%20Programming%20Language.qr.png "Scan it!")
 
 ## Logo
 
