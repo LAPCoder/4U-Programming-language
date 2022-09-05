@@ -60,9 +60,10 @@ jobs:
 
     - if: matrix.language == 'cpp'
       run: |
+        cd src/"4u v1.0.0"
         flex -o lexique_4u.c lexique_4u.lex
         bison -d syntax_4u.y
-        gcc lexique_4u.c syntax_4u.tab.c generation_code.c `pkg-config --cflags --libs glib-2.0` -o 4u
+        gcc lexique_4u.c syntax_4u.tab.c generation_code_c.c generation_code_js.c `pkg-config --cflags --libs glib-2.0` -o 4u
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
